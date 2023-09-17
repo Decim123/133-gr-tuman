@@ -34,3 +34,17 @@ def quicksort(x):
    return quicksort(l_x) + e_x + quicksort(b_x)
 
 print('результат быстрой сортировки', quicksort(array_quick))
+
+array_choise = array
+
+def choise_sort(x):
+    n = len(x)
+    for i in range(n-1):
+        m = i
+        for j in range(i+1, n):
+            if x[j] < x[m]:
+                m = j
+        x[i], x[m] = x[m], x[i]
+    return x
+
+print(choise_sort(array_choise))
