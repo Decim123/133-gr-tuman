@@ -1,6 +1,4 @@
 import random
-import math
-import json
 
 strtrng = 0
 endrng = 100
@@ -8,9 +6,6 @@ array = []
 
 for i in range(strtrng, endrng):
     array.append(random.randint(1, 99))
-print('начальный массив -', array)
-
-array_bubble = array
 
 def bubblesort(x):
     for i in range(endrng-1):
@@ -18,10 +13,6 @@ def bubblesort(x):
             if x[j] > x[j+1]:
                 x[j], x[j+1] = x[j+1], x[j]            
     return x
-
-print('результат пузырьковой сортировки -', bubblesort(array_bubble))
-
-array_quick = array
 
 def quicksort(x):
    if len(x) <= 1:
@@ -33,10 +24,6 @@ def quicksort(x):
    b_x = [n for n in x if n > q]
    return quicksort(l_x) + e_x + quicksort(b_x)
 
-print('результат быстрой сортировки', quicksort(array_quick))
-
-array_choise = array
-
 def choise_sort(x):
     n = len(x)
     for i in range(n-1):
@@ -47,4 +34,12 @@ def choise_sort(x):
         x[i], x[m] = x[m], x[i]
     return x
 
-print(choise_sort(array_choise))
+array_bubble = array
+array_quick = array
+array_choise = array
+
+print('начальный массив -', array)
+print('результат пузырьковой сортировки -', bubblesort(array_bubble))
+print('результат быстрой сортировки', quicksort(array_quick))
+print('результат сортировки выбором', choise_sort(array_choise))
+
