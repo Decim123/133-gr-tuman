@@ -1,4 +1,5 @@
 import random
+import time
 
 strtrng = 0
 endrng = 100
@@ -24,7 +25,7 @@ def quicksort(x):
    b_x = [n for n in x if n > q]
    return quicksort(l_x) + e_x + quicksort(b_x)
 
-def choise_sort(x):
+def choisesort(x):
     n = len(x)
     for i in range(n-1):
         m = i
@@ -39,7 +40,20 @@ array_quick = array
 array_choise = array
 
 print('начальный массив -', array)
+
+start_bubble = time.time()
 print('результат пузырьковой сортировки -', bubblesort(array_bubble))
-print('результат быстрой сортировки', quicksort(array_quick))
-print('результат сортировки выбором', choise_sort(array_choise))
+end_bubble = time.time() - start_bubble
+print('время выполнения пузырьковой сортировки -', end_bubble, 'сек')
+
+start_quick = time.time()
+print('результат ,быстрой сортировки -', quicksort(array_quick))
+end_quick = time.time() - start_quick
+print('время выполнения быстрой сортировки -', end_quick, 'сек')
+
+start_choise = time.time()
+print('результат сортировки выбором -', choisesort(array_choise))
+end_choise = time.time() - start_choise
+print('время выполнения сортировки выбором -', end_choise, 'сек')
+
 
