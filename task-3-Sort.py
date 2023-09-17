@@ -2,11 +2,12 @@ import random
 import time
 
 strtrng = 0
-endrng = 100
+endrng = 999999
+lenth_array = 50000000
 array = []
 
 for i in range(strtrng, endrng):
-    array.append(random.randint(1, 99))
+    array.append(random.randint(1, lenth_array))
 
 def bubblesort(x):
     for i in range(endrng-1):
