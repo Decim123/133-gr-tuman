@@ -2,8 +2,8 @@ import random
 import time
 
 strtrng = 0
-endrng = 1000
-lenth_array = 1000
+endrng = 100
+lenth_array = 100
 array = []
 array_bubble=[]
 array_quick=[]
