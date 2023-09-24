@@ -8,7 +8,7 @@ def words_counter(x):
     return count_words
 
 def replacer(x):
-    rep = x.replace(input('заменяемый символ '), '😎')
+    rep = x.replace(input('Введите заменяемый символ '), '😎')
     return rep
 
 def split(x):
@@ -20,8 +20,6 @@ def same_symbols_couter(x):
     count = Counter(x)
     return count
 
-print(words_counter(sentence))
-print(replacer(sentence))
-print(split(sentence))
-print(sentence)
-print(same_symbols_couter(sentence))
+print('количество слов - ', words_counter(sentence))
+print('результат замены -', replacer(sentence))
+print('количество повторений символа - ', same_symbols_couter(sentence))
